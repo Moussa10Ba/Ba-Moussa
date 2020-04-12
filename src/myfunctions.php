@@ -5,7 +5,6 @@ $json_decode = json_decode($file);
 foreach ($json_decode as $value) {
         $log=$value->login;
         $pas=$value->password;
-        $role=$value->role;
         if($log==$loginform && $pas==$passwordform ){
              return $value;
         }           

@@ -1,13 +1,17 @@
 [{
     "login" : "admin@login.sa",
     "password" : "passer",
-    "role":"admin"
+    "role":"admin",
+    "photo":"../images/admin.png",
+    "nom": "Ba",
+    "prenom": "Moussa"
 },
 {
     "login": "joueur@login.sa",
     "password": "passer",
-    "role": "joueur"
-
+    "role": "joueur",
+    "nom": "Wane",
+    "prenom": "Gamer "
 }
 
 ]

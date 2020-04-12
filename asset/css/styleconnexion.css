@@ -24,7 +24,7 @@
     width: 50%;
     float: left;
     margin-left: 25%;
-    height: 350px;
+    height: 370px;
     background-color:#f2f2f2;
     margin-top: 5%;
     border-radius: 5px;
@@ -57,6 +57,7 @@
     background-color: #f0eef0;
     margin-left: 10%;
     border-radius: 5px;
+    margin-top: 5%;
     font-size: 30px;
     font-family: sans-serif;
     background-image: url(images/icone-user.png);
@@ -69,6 +70,7 @@
     background-color: #f0eef0;
     margin-left: 10%;
     border-radius: 5px;
+    margin-top: 5%;
     font-size: 30px;
     font-family: sans-serif;
     background-image: url(images/icone-password.png);
@@ -82,20 +84,29 @@
     margin-left: 10%;
     border-radius: 5px;
     background-color: #51bfd0;
-    margin-top: 4%;
+    margin-top: 0%;
     font-size: 20px;
     font-family: sans-serif;
     color: white;
     
 }
 #lien{
-    margin-top: 7%;
+    margin-top: 2%;
     float: right;
-    margin-right: 10%;
+    margin-right: 15%;
     text-decoration: none;
 
 }
 #lien a{
     text-decoration: none;
    color:#b7b7b7;
+}
+#error{
+    color: red;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    height: 50px;
+    padding-top: 2%;
+    
 }
