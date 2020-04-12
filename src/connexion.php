@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if (isset($_POST['deconnexion'])) {
+    session_destroy();
+}
 include ("../src/myfunctions.php");
 $errorlogin="";
 $errorpassword="";

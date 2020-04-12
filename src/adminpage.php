@@ -1,9 +1,13 @@
 <?php
 session_start();
-echo "Administrator Name: ".$_SESSION['nom']." ".$_SESSION['prenom']."<br>";
+if (isset($_SESSION['name'])) {
+    echo "Administrator Name: ".$_SESSION['nom']." ".$_SESSION['prenom']."<br>";
 if (isset($deconnexion)) {
+    header("Location: connexion.php");
     session_destroy();
 }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +18,9 @@ if (isset($deconnexion)) {
 </head>
 <body>
     <h1>Admin</h1>
-    <a href="connexion.php"><input type="button" value="Déconnexion" name="deconnexion"></a>
+    <form action="connexion.php" method="post">
+    <p><input type="submit" value="Déconnexion" name="deconnexion" /></p>
+</form>
     
 </body>
 </html>
