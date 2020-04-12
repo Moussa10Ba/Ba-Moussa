@@ -4,7 +4,7 @@ if (isset($_SESSION['nom'])) {
     echo "Administrator Name: ".$_SESSION['nom']." ".$_SESSION['prenom']."<br>";
 if (isset($deconnexion)) {
     header("Location: connexion.php");
-    session_destroy();
+    
 
 }
 ?>

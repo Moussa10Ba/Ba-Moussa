@@ -4,7 +4,6 @@ if (isset($_SESSION)) {
     echo "Player Name: ".$_SESSION['nom']." ".$_SESSION['prenom']."<br>";
 if (isset($deconnexion)) {
     header("Location: connexion.php");
-    session_destroy();
 }
 ?>
 <!DOCTYPE html>
