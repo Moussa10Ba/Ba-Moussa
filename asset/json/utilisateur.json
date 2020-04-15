@@ -1,0 +1,18 @@
+[
+    {
+        "prenom":"Moussa",
+        "nom":"Ba",
+        "login":"admin",
+        "password":"admin",
+        "profil":"admin",
+        "photo":"admin.jpg"
+    },
+    {
+        "prenom":"Yahya",
+        "nom":"Ba",
+        "login":"joueur",
+        "password":"joueur",
+        "profil":"joueur",
+        "photo":"joueur.jpg"
+    }
+]
