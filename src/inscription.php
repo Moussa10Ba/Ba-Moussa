@@ -1,4 +1,18 @@
+<script>
 
+            function previewImage(){
+               var file = document.getElementById('file').files;
+               if (file.length > 0) {
+                   var fileReader = new FileReader();
+
+                   fileReader.onload = function (event){
+                       document.getElementById("preview").setAttribute("src", event.target.result);
+                   };
+                    fileReader.readAsDataURL(file[0]);
+               }
+            }
+
+</script>
 
 
 
@@ -9,7 +23,7 @@
           <div class="phrase">Pour tester votre niveau de culture generale</div>
       </div>
       <div class="imgavatar">
-     <Center><img src="asset/images/img5.jpg" alt=""></Center> 
+           <img id="preview">
       </div>
       
             <div class="input-usersform">
@@ -46,7 +60,7 @@
 
         <div class="input-usersform">
             <div class="label-avatar">Avatar</div>
-            <input type="file" class="input-avatar" name="avatar" id="avatar" error="error-users-6" accept=".jpg, .jpeg, .png"> 
+            <input type="file" class="input-avatar" name="file" id="file" error="error-users-6" accept="image/*" onchange="previewImage();"> 
             <div class="error-users" id="error-users-5"></div>
         </div>
 

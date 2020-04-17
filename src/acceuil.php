@@ -4,6 +4,12 @@
 
 is_connect();
 
+if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
+    require_once("src/listeJoueur.php");
+}
+        //require_once("src/inscription.php");
+        
+
 
 ?>
 
@@ -24,20 +30,20 @@ is_connect();
         <div class="blocbody">
              <div class="menu">
                 <p>
-                <a href="#">Liste  Questions</a>
+                <a href="">Liste  Questions</a>
                     <img src="asset/images/ic-liste.png" alt="">
                 </p>            
             </div> 
             <div class="menu" >
                 <p>
-                <a href="#">Creer Admin</a>
+                <a href="index.php?lien=acceuil&page=creeradmin">Creer Admin</a>
                     <img src="asset/images/ic-ajout.png" alt="">
                 </p>            
             </div>  
 
             <div class="menu">
                 <p>
-                <a href="#">Liste  joueurs</a>
+                <a href="index.php?lien=acceuil&page=joueur">Liste  joueurs</a>
                     <img src="asset/images/ic-liste.png" alt="">
                 </p>            
             </div>  
@@ -53,8 +59,19 @@ is_connect();
     </div>
     <div class="blocdroite">
     <?php
-            require_once("src/inscription.php");
-            require_once("src/listeJoueur.php");
+    if (isset($_GET['page'])) {
+        switch ($_GET['page']) {
+            case 'joueur':
+                require_once("listeJoueurs.php");
+                break;
+            
+            case 'creeradmin':
+                require_once("inscription.php");
+            break;
+        }
+    }else{
+        require_once("inscription.php");
+    }
     ?>
     
     </div>

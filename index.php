@@ -22,6 +22,10 @@
             }if($_GET['lien']=="jeux"){
                 require_once("src/jeux.php");
             }
+
+            if($_GET['lien']=="listeJoueurs"){
+                require_once("src/jeux.php");
+            }
         }
         else{
             if (isset($_GET['statut']) && $_GET['statut']==="logout") {
