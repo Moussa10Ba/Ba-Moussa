@@ -10,6 +10,7 @@ $erreur="";
             header("location:index.php?lien=".$result);
         }
     }
+    
 
 ?>
 
@@ -39,7 +40,7 @@ $erreur="";
             <div class="input-form">
                 
                      <button type="submit" class="btn-form" name="btn_submit" id="">Connexion</button>
-                     <a href="" class="link-form">S'inscrire pour jouer</a>
+                     <a href="inscription.php" class="link-form" >S'inscrire pour jouer</a>
                 
             </div>
 

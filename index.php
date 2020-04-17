@@ -14,11 +14,11 @@
     <div class="content">
     <?php
     session_start();
-        require_once("src/function.php");
+      require_once("src/function.php");
 
         if (isset($_GET['lien'])) {
             if($_GET['lien']=="acceuil") {
-                 require_once("src/admin.php");
+                 require_once("src/acceuil.php");
             }if($_GET['lien']=="jeux"){
                 require_once("src/jeux.php");
             }
@@ -27,9 +27,12 @@
             if (isset($_GET['statut']) && $_GET['statut']==="logout") {
                 deconnexion();
             }
-            require_once("src/connexion.php");
+           require_once("src/connexion.php");
         }
         
+    //require_once("src/inscription.php");
+    
+      // require_once("src/acceuil.php");
     ?>
     
     </div>

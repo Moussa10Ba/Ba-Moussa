@@ -10,9 +10,51 @@
     {
         "prenom":"Yahya",
         "nom":"Ba",
+        "score":150,
         "login":"joueur",
         "password":"joueur",
         "profil":"joueur",
         "photo":"joueur.jpg"
+        
+    },
+    {
+        "prenom":"Killer",
+        "nom":"Young",
+        "score":305,
+        "login":"joueur",
+        "password":"joueur",
+        "profil":"joueur",
+        "photo":"joueur.jpg"
+        
+    },
+    {
+        "prenom":"Aissata",
+        "nom":"Ba",
+        "score":200,
+        "login":"joueur",
+        "password":"joueur",
+        "profil":"joueur",
+        "photo":"joueur.jpg"
+        
+    },
+    {
+        "prenom":"Daouda",
+        "nom":"Ba",
+        "score":100,
+        "login":"joueur",
+        "password":"joueur",
+        "profil":"joueur",
+        "photo":"joueur.jpg"
+        
+    },
+    {
+        "prenom":"Isma",
+        "nom":"Ba",
+        "score":200,
+        "login":"joueur",
+        "password":"joueur",
+        "profil":"joueur",
+        "photo":"joueur.jpg"
+        
     }
 ]
