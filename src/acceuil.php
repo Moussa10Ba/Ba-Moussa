@@ -25,7 +25,11 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
             <div class="headergauche">
                     <div class="info"> <?php echo $_SESSION['user']['nom'];?></div>
                     <div class="info"> <?php echo $_SESSION['user']['prenom'];?></div>
-                    <div class="photoUserconnecte"></div>
+                    <?php $tof= $_SESSION['user']['photo']?>
+                    <div class="photoUserconnecte">
+                    
+                    <img src="asset/images/profil/<?php echo $_SESSION['user']['photo'];?>" alt="">
+                    </div>
             </div>
         <div class="blocbody">
              <div class="menu">

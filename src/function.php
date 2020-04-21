@@ -16,9 +16,23 @@
                     return "error";
                 }
             }
-
     }
 
+    function is_login_in_json($login_from_inscription){
+            $users=getData();
+            if(!empty($users)){
+                foreach ($users as $key => $user) {
+                    if ($user["login"]===$login_from_inscription) {
+                            return true;
+                    }
+                }
+            }else {
+                return false;
+            }
+            
+    }
+   
+   
 
     function deconnexion(){
         unset($_SESSION['user']);
@@ -38,6 +52,12 @@ function getData($file="utilisateur"){
     return $data;
 }
     
+function putData($users){
+    $get= getData();
+    $get[]=$users;
+    $get=json_encode($get);
+    file_put_contents("asset/json/utilisateur.json",$get);
+}
 
 
 ?>

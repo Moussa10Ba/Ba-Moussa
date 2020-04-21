@@ -25,6 +25,10 @@
 
             if($_GET['lien']=="listeJoueurs"){
                 require_once("src/jeux.php");
+            }if($_GET['lien']=="inscription"){
+                require_once("src/inscription.php");
+            }if($_GET['lien']=="connexion"){
+                require_once("src/connexion.php");
             }
         }
         else{

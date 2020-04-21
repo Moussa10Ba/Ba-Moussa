@@ -10,7 +10,7 @@ $erreur="";
             header("location:index.php?lien=".$result);
         }
     }
-    
+
 
 ?>
 
@@ -40,7 +40,7 @@ $erreur="";
             <div class="input-form">
                 
                      <button type="submit" class="btn-form" name="btn_submit" id="">Connexion</button>
-                     <a href="inscription.php" class="link-form" >S'inscrire pour jouer</a>
+                     <a href="index.php?lien=inscription" class="link-form" >S'inscrire pour jouer</a>
                 
             </div>
 
@@ -56,10 +56,9 @@ for(input of inputs){
             var idDivError=e.target.getAttribute("error");
             document.getElementById(idDivError).innerText=""
 
-        }
+       }
     })
 }
-
 
 
 document.getElementById("form-connexion").addEventListener("submit",function(e){
@@ -77,7 +76,7 @@ const inputs= document.getElementsByTagName("input");
     }
     if(error){
         e.preventDefault();
-         return false;
+        return false;
     }
     
 })
