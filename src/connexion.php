@@ -4,11 +4,14 @@ $erreur="";
         $login=$_POST['login'];
         $password=$_POST['password'];
         $result=connexion($login,$password);
+        echo $result;
+        
         if ($result=="error") {
             $erreur= "Login ou Password incorrect";
         }else{
             header("location:index.php?lien=".$result);
         }
+        
     }
 
 

@@ -3,19 +3,18 @@
     function connexion($login,$pwd){
         $users=getData();
         foreach ($users as $key => $user) {
-                if ($user["login"]===$login && $user["password"]===$pwd) {
-                    $_SESSION['user']=$user;
-                    $_SESSION['statut']="login";
-                        if ($user["profil"]==="admin") {
-                           return "acceuil";
-                        }else{
-                            return "jeux";
-                        }
-                }
-                else{
-                    return "error";
-                }
+            if ($user["login"]==$login && $user["password"]==$pwd) {
+                $_SESSION['user']=$user;
+                $_SESSION['statut']="login";
+                    if ($user["profil"]==="admin") {
+                       return "acceuil";
+                    }else{
+                        return "jeux";
+                    }
             }
+            
+        }
+        return "error";
     }
 
     function is_login_in_json($login_from_inscription){

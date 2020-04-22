@@ -15,7 +15,6 @@
     <?php
     session_start();
       require_once("src/function.php");
-
         if (isset($_GET['lien'])) {
             if($_GET['lien']=="acceuil") {
                  require_once("src/acceuil.php");
@@ -29,9 +28,11 @@
                 require_once("src/inscription.php");
             }if($_GET['lien']=="connexion"){
                 require_once("src/connexion.php");
+            }if($_GET['lien']=="jeux"){
+                require_once("src/jeux.php");
             }
-        }
-        else{
+
+        }else{
             if (isset($_GET['statut']) && $_GET['statut']==="logout") {
                 deconnexion();
             }

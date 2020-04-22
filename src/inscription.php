@@ -1,5 +1,6 @@
 <?php 
-if (isset($_POST['creer']) && isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])) {
+
+if (isset($_POST['btn_submit']) && isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])) {
     $get=getData();
     $users=array();
     $users['nom']=$_POST['nom'];
@@ -31,7 +32,8 @@ if (isset($_POST['creer']) && isset($_FILES['avatar']) && !empty($_FILES['avatar
                         
                         putData($users);
                         if($_GET['lien']==="inscription"){
-                            require_once("index.php?lien=connexion");
+                            $_GET['lien']="connexion";
+                           header("location:index.php");
                         }
                     }else {
                         $erreur = "Erreur Durant importation de votre photo";
@@ -50,11 +52,11 @@ if (isset($_POST['creer']) && isset($_FILES['avatar']) && !empty($_FILES['avatar
 
 
 <div class="container-users">
-<div class="header-users">
+    <div class="header-users">
           <h3>S'INSCRIRE</h3>
           <div class="phrase">Pour tester votre niveau de culture generale</div>
-      </div>
-      <div class="blocavatar"> 
+     </div>
+         <div class="blocavatar"> 
       <div class="imgavatar">
            <img id="preview">
       </div>
@@ -109,7 +111,7 @@ if (isset($_POST['creer']) && isset($_FILES['avatar']) && !empty($_FILES['avatar
         </div>
 
         <div class="input-usersform">
-            <button type="submit" class="btn-form" name="creer" >Creer Compte</button>    
+            <button type="submit" class="btn-form" name="btn_submit" >Creer Compte</button>    
             </div>
 
       </div>
@@ -136,7 +138,7 @@ function previewImage(){
                    alert("Trop Grand");
                }
             }
-/*
+
 
 const inputs= document.getElementsByTagName("input");
 for(input of inputs){
@@ -159,8 +161,9 @@ const inputs= document.getElementsByTagName("input");
         if(!input.value){ 
             
                 document.getElementById(idDivError).innerText="Ce champs est obligatoire"
+                error=true;
             }
-            error=true;
+            
         } 
     }
     
@@ -172,6 +175,6 @@ const inputs= document.getElementsByTagName("input");
     
 })
 
-*/
+
 
 </script>
