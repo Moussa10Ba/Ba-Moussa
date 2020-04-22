@@ -1,8 +1,12 @@
-
 <?php
-/*
 is_connect();
-*/
+$t=getData();
+$tabscore=array();
+$_SESSION['t']=$t;
+$totalSup=count($t);
+define("NBPARPAGE",1);
+$nbrPageSup=ceil($totalSup/NBPARPAGE);
+
 ?>
 
 
@@ -22,14 +26,99 @@ is_connect();
     <div class="bodyjeux">
         <div class="gauchejeux">
             <div class="headergauche"></div>
-            <div class="scorejeux"></div>
-            <div class="questionjeux"> </div>
+            <div class="scorejeux">
+                    <?php echo $_SESSION['user']['score'];?>
+
+            </div>
+
+                <div class="questionjeux">         
+                <?php
+                                if (isset($_GET['page'])) {
+                                $pageActuelle=$_GET['page'];
+                                if ($pageActuelle>$nbrPageSup) {
+                                    $pageActuelle=$nbrPageSup;
+                                }
+                                }else{
+                                $pageActuelle=1;
+                                } 
+
+
+                                $indiceDebut=($pageActuelle-1)*NBPARPAGE;
+                                $indiceFin=$indiceDebut+NBPARPAGE-1;
+                                
+
+                            /*    for ($i=$indiceDebut; $i <=$indiceFin ; $i++) { 
+                                
+                                    if (isset($t[$i])) {
+                                        echo '<tr>';
+                                        echo '<td>'.$t[$i]['nom'].$t[$i]['prenom'].'</td>';
+                                        echo '</tr>';
+                                    }   
+                                }
+                                
+                                    echo "<br>";
+                                    */
+
+                                echo $pageActuelle;
+                                
+                                echo $nbrPageSup;
+                                ?>
+                                <div class="paginationjeux">
+                                <?php
+                                if($pageActuelle<$nbrPageSup){
+                                    $page=$pageActuelle+1;
+                                    ?>
+                                    <a href="index.php?lien=jeux&page=<?php echo $page?>"><input type="button" name="suivant" class="btn-suivant" value="Suivant"/></a>
+                                    <?php
+                                }
+                                if($pageActuelle!=1){
+                                    $page=$pageActuelle-1;
+                                    ?>
+                                    <a href="index.php?lien=jeux&page=<?php echo $page?>"><input type="button" name="precedant" class="btn-precedant" value="Precedant"/></a>
+                                    <?php
+                                }
+                                
+                                ?>
+                                </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
         <div class="droitejeux">
        <p><button class="btndroitetop">Top Score</button> <button class="btndroitemon">Mon Meilleur Score</button></p> 
        
-            <div class="tablejeux"></div>
+            <div class="tablejeux">
+                   <?php 
+                   
+                   $tab=triTableau($t);
+                   ?>
+                  <table class="tableaujeux">
+                      
+                       <?php
+                   for ($i=0; $i <5 ; $i++) { 
+                    echo "<tr>";
+                       echo "<td>".$tab[$i]['nom']."</td>"; 
+                       echo "<td class=\"tt\">".$tab[$i]['score']."</td>";
+                       echo "</tr>";
+                       
+                   }
+                   echo "<table>";
+                   ?>
+            
+            </div>
         </div>
 
 

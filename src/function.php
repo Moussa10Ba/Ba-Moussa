@@ -31,6 +31,21 @@
             
     }
    
+    function triTableau($tab){
+        $tmp=array();
+        $taille=count($tab);
+        for ($i=0; $i <$taille-1 ; $i++) { 
+            for ($j=$i+1; $j <$taille; $j++) { 
+                if ($tab[$j]['score']>$tab[$i]['score']) {
+                    $tmp=$tab[$j];
+                    $tab[$j]=$tab[$i];
+                    $tab[$i]=$tmp;
+
+                }
+            }
+        }
+        return $tab;
+    }
    
 
     function deconnexion(){

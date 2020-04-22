@@ -22,42 +22,46 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
     </div>
 
     <div class="blocgauche">
-            <div class="headergauche">
-                    <div class="info"> <?php echo $_SESSION['user']['nom'];?></div>
-                    <div class="info"> <?php echo $_SESSION['user']['prenom'];?></div>
+            <div class="headergaucheadmin">
+                    <div class="info"> <?php echo $_SESSION['user']['nom']."<br>".$_SESSION['user']['nom'];?></div>
+                    
                     <?php $tof= $_SESSION['user']['photo']?>
                     <div class="photoUserconnecte">
+                    <?php
+                    /*<img src="asset/images/profil/<?php echo $_SESSION['user']['photo'];?>" alt="" />
+                    */
+                    ?>
                     
-                    <img src="asset/images/profil/<?php echo $_SESSION['user']['photo'];?>" alt="" />
                     </div>
             </div>
-        <div class="blocbody">
-             <div class="menu">
-                <p>
-                <a href="">Liste  Questions</a>
-                    <img src="asset/images/ic-liste.png" alt="">
-                </p>            
-            </div> 
-            <div class="menu" >
-                <p>
-                <a href="index.php?lien=acceuil&page=creeradmin">Creer Admin</a>
-                    <img src="asset/images/ic-ajout.png" alt="">
-                </p>            
-            </div>  
+        <div class="blocbodyadmin">
+        <div class="menu">
+                            <p>
+                            <a href="">Liste  Questions</a>
+                                <img src="asset/images/ic-liste.png" alt="">
+                            </p>            
+                    </div> 
 
-            <div class="menu">
-                <p>
-                <a href="index.php?lien=acceuil&page=joueur">Liste  joueurs</a>
-                    <img src="asset/images/ic-liste.png" alt="">
-                </p>            
-            </div>  
+                    <div class="menu" >
+                        <p>
+                        <a href="index.php?lien=acceuil&page=creeradmin">Creer Admin</a>
+                            <img src="asset/images/ic-ajout.png" alt="">
+                        </p>            
+                    </div>  
 
-            <div class="menu">
-                <p>
-                <a href="#">Creer  Questions</a>
-                    <img src="asset/images/ic-ajout-active.png" alt="">
-                </p>            
-            </div> 
+                    <div class="menu">
+                        <p>
+                        <a href="index.php?lien=acceuil&page=joueur">Liste  joueurs</a>
+                            <img src="asset/images/ic-liste.png" alt="">
+                        </p>            
+                    </div>  
+
+                    <div class="menu">
+                        <p>
+                        <a href="#">Creer  Questions</a>
+                            <img src="asset/images/ic-ajout-active.png" alt="">
+                        </p>            
+                    </div> 
         </div>    
 
     </div>
