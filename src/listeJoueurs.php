@@ -15,6 +15,7 @@ $nbrPageSup=ceil($totalSup/NBPARPAGE);
 <table class="table">
     <th>Nom</th> <th>Prenom</th> <th>Score</th>
     <?php
+    $tab=triTableau($tab);
     foreach ($tab as $key => $user) {
         echo "<tr>";
         echo "<td>".$user['nom']."</td>"."<td>".$user['nom']."</td>"."<td>".$user['score']."</td>";
