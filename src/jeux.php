@@ -12,10 +12,12 @@ $nbrPageSup=ceil($totalSup/NBPARPAGE);
 
 <div class="containerjeux">
             <div class="jeuxheader">    
-                <div class="imagejoueur"></div>
+                <div class="imagejoueur">
+                    <img src="asset/images/profil/<?php echo $_SESSION['user']['photo'];?>" alt="" class="avatarprofil">
+                </div>
                 <div class="infojoueur">
                    <?php
-                        echo ": ".$_SESSION['user']['nom']." ".$_SESSION['user']['prenom'];
+                        echo $_SESSION['user']['nom']." ".$_SESSION['user']['prenom'];
                    ?>
                 </div>
                 <div class="textheaderjeux">BIENVENUE SUR LA PLATFORME DE JEUX DE QUIZZ <br> JOUER ET TESTER VOTRE NIVEAU DE CULTURE GENERALE</div>
@@ -59,9 +61,9 @@ $nbrPageSup=ceil($totalSup/NBPARPAGE);
                                     echo "<br>";
                                     */
 
-                                echo $pageActuelle;
-                                
-                                echo $nbrPageSup;
+                                echo "Page Actuelle ".$pageActuelle;
+                                echo "<br>";
+                                echo "Nombre de Pages ".$nbrPageSup;
                                 ?>
                                 <div class="paginationjeux">
                                 <?php

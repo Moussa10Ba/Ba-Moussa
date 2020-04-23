@@ -11,7 +11,7 @@ if (isset($_POST['btn_submit']) && isset($_FILES['avatar']) && !empty($_FILES['a
         if (is_login_in_json($users['login'])) {
             $erreur="Login Indisponible";
         }elseif($password2!= $users['password']){
-            echo "Les 2 mots de passes ne correspondent pas";
+            $erreur="Les 2 mots de passes ne correspondent pas";
         }else{
         $users['prenom']=$_POST['prenom'];
         $users['login']=$_POST['login'];
@@ -58,7 +58,7 @@ if (isset($_POST['btn_submit']) && isset($_FILES['avatar']) && !empty($_FILES['a
      </div>
          <div class="blocavatar"> 
       <div class="imgavatar">
-           <img id="preview">
+           <img id="preview" class="avatarprofil">
       </div>
       </div>
       
@@ -105,13 +105,13 @@ if (isset($_POST['btn_submit']) && isset($_FILES['avatar']) && !empty($_FILES['a
         </div>
 
         <div class="erreur">
-            <?php if (isset($erreurLogin)) {
-                echo $erreurLogin;
+            <?php if (isset($erreur)) {
+                echo $erreur;
             }?>
         </div>
 
         <div class="input-usersform">
-            <button type="submit" class="btn-form" name="btn_submit" >Creer Compte</button>    
+            <button type="submit" class="btn-forminscription" name="btn_submit" >Creer Compte</button>    
             </div>
 
       </div>

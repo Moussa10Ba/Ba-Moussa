@@ -27,10 +27,10 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
                     
                     <?php $tof= $_SESSION['user']['photo']?>
                     <div class="photoUserconnecte">
-                    <?php
-                    /*<img src="asset/images/profil/<?php echo $_SESSION['user']['photo'];?>" alt="" />
-                    */
-                    ?>
+                    
+                    <img src="asset/images/profil/<?php echo $_SESSION['user']['photo'];?>" alt="" class="imageadmin" />
+                    
+                    
                     
                     </div>
             </div>

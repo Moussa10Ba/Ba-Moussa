@@ -30,6 +30,8 @@
                 require_once("src/connexion.php");
             }if($_GET['lien']=="jeux"){
                 require_once("src/jeux.php");
+            }if ($_GET['target']) {
+                require_once("src/acceuil.php");
             }
 
         }else{
