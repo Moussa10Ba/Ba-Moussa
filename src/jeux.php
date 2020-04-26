@@ -43,24 +43,9 @@ $nbrPageSup=ceil($totalSup/NBPARPAGE);
                                 }else{
                                 $pageActuelle=1;
                                 } 
-
-
                                 $indiceDebut=($pageActuelle-1)*NBPARPAGE;
                                 $indiceFin=$indiceDebut+NBPARPAGE-1;
-                                
-
-                            /*    for ($i=$indiceDebut; $i <=$indiceFin ; $i++) { 
-                                
-                                    if (isset($t[$i])) {
-                                        echo '<tr>';
-                                        echo '<td>'.$t[$i]['nom'].$t[$i]['prenom'].'</td>';
-                                        echo '</tr>';
-                                    }   
-                                }
-                                
-                                    echo "<br>";
-                                    */
-
+                    
                                 echo "Page Actuelle ".$pageActuelle;
                                 echo "<br>";
                                 echo "Nombre de Pages ".$nbrPageSup;

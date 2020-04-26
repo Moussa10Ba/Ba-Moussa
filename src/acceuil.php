@@ -58,7 +58,7 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
 
                     <div class="menu">
                         <p>
-                        <a href="#">Creer  Questions</a>
+                        <a href="index.php?lien=acceuil&page=creerquestion">Creer  Questions</a>
                             <img src="asset/images/ic-ajout-active.png" alt="">
                         </p>            
                     </div> 
@@ -75,6 +75,10 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
             
             case 'creeradmin':
                 require_once("inscription.php");
+            break;
+
+            case 'creerquestion':
+                require_once("creerquestion.php");
             break;
         }
     }else{

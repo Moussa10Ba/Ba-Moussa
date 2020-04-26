@@ -17,7 +17,7 @@ body{
    
 }
 .content{
-  background-image: url(../images/img-bg.jpg);
+ background-image: url(../images/img-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 800px;
@@ -623,4 +623,120 @@ text-align: center;
 }
 .tt{
     border-bottom: 4px solid darkturquoise;
+}
+/*CREER QUESTION ----------------------------------------------------------------------------------------------------------------------------------*/
+.contenairCreerQuestion{
+width: 100%;
+height: auto;
+background-color: white;
+margin-top: -3.5%;
+}
+.headerCreerQuestion{
+    width: 90%;
+    margin-left: 5%;
+    height: 80px;
+
+}
+.textheaderCreerQuestion{
+   
+    padding: 5%;
+    font-size: 30px;
+    color: darkturquoise;
+    font-weight: bold;
+    font-family: josefin sans;
+    font-style: italic;
+}
+.bodyCreerQuestion{
+    height: auto;
+    margin-top: 2%;
+    border-radius: 5%;
+    border: 2px solid darkturquoise;
+    width: 94%;
+    margin-left: 3%;
+}
+.form-questions{
+    width: 90%;
+    height: 75px;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+.libelle{
+    float: left;
+    font-size: 20px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5%;
+
+}
+.controlquestion1{
+    margin-left: 2%;
+    height: 90%;
+    width: 80%;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-style: initial;
+    border-bottom: 2px solid darkturquoise;
+    border-right: 2px solid darkturquoise;
+
+}
+.controlquestion2{
+    margin-left: 6.5%;
+    height: 50%;
+    width: 20%;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    border-bottom: 2px solid darkturquoise;
+    border-right: 2px solid darkturquoise;
+    margin-top: 3%;
+   
+}
+.controlquestion3{
+    margin-left: 2%;
+    height: 60%;
+    width: 56%;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-style: initial;
+    border-bottom: 2px solid darkturquoise;
+    border-right: 2px solid darkturquoise;
+    
+}
+.iconeajout{
+    height: 40px;
+    width: 8%;
+    float: right;
+    
+
+}
+.iconeajout img{
+    float: right;
+   
+}
+.controlquestion4{
+    margin-left: 2%;
+    height: 70%;
+    width: 60%;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    font-style: initial;
+    border-bottom: 2px solid darkturquoise;
+    border-right: 2px solid darkturquoise;
+}
+
+.btn-enregistrer{
+  /*  padding: 5px;*/
+    color: white;
+    background-color: darkturquoise;
+    font-size: 15px;
+    border-radius: 5px;
+    border-radius: 1px solid darkturquoise;
+    float: right;
+  /*  margin-right: 4%;*/
+  margin-top: auto;
+    
+}
+.btn-ajoutreponse{
+    float: right;
+    margin-right: 0px;
+    
 }
