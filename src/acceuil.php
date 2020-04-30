@@ -37,7 +37,7 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
         <div class="blocbodyadmin">
         <div class="menu">
                             <p>
-                            <a href="">Liste  Questions</a>
+                            <a href="index.php?lien=acceuil&page=listequestion&pagination=1">Liste  Questions</a>
                                 <img src="asset/images/ic-liste.png" alt="">
                             </p>            
                     </div> 
@@ -51,7 +51,7 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
 
                     <div class="menu">
                         <p>
-                        <a href="index.php?lien=acceuil&page=joueur">Liste  joueurs</a>
+                        <a href="index.php?lien=acceuil&page=joueur&pagination=1">Liste  joueurs</a>
                             <img src="asset/images/ic-liste.png" alt="">
                         </p>            
                     </div>  
@@ -80,6 +80,10 @@ if (isset($_GET['lien']) && $_GET['lien']==="listeJoueurs") {
             case 'creerquestion':
                 require_once("creerquestion.php");
             break;
+            case 'listequestion':
+                require_once("listequestion.php");
+            break;
+
         }
     }else{
         require_once("inscription.php");

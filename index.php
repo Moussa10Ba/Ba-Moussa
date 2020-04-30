@@ -30,7 +30,7 @@
                 require_once("src/connexion.php");
             }if($_GET['lien']=="jeux"){
                 require_once("src/jeux.php");
-            }if ($_GET['lien']=="acceuil" && $_GET['page']) {
+            }if ($_GET['lien']=="acceuil") {
                 require_once("src/acceuil.php");
             }
 
@@ -40,6 +40,7 @@
             }
            require_once("src/connexion.php");
         }
+        
         
     //require_once("src/inscription.php");
     

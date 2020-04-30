@@ -72,6 +72,16 @@ function putData($users){
     $get=json_encode($get);
     file_put_contents("asset/json/utilisateur.json",$get);
 }
-
+function putQuestions($questionnaire){
+    $get= getQuestionnaire();
+    $get[]=$questionnaire;
+    $get=json_encode($get);
+    file_put_contents("asset/json/questionnaire.json",$get);
+}
+function getQuestionnaire($file="questionnaire"){
+    $data=file_get_contents("asset/json/questionnaire.json");
+    $data=json_decode($data,true);
+    return $data;
+}
 
 ?>

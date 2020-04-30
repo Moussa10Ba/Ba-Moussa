@@ -7,6 +7,7 @@ if (isset($_POST['btn_submit']) && isset($_FILES['avatar']) && !empty($_FILES['a
     $users['login']=$_POST['login'];
     $rename= $users['login'];
     $users['password']=$_POST['password'];
+    $users['score']=0;
     $password2=$_POST['password2'];
         if (is_login_in_json($users['login'])) {
             $erreur="Login Indisponible";
