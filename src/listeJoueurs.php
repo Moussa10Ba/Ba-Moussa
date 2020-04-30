@@ -1,14 +1,9 @@
 <?php
 is_connect();
 $tab=getData();
-/*
-$tabliste=array();
-$_SESSION['tabliste']=$tab;
-$totalJoueurs=count($tab);
-define("NBPARPAGE",15);
-$nbrPage=ceil($totalJoueurs/NBPARPAGE);*/
 $_SESSION['tab']=$tab;
 $totalSup=count($tab);
+$tab=triTableau($tab);
 define("NBPARPAGE",15);
 $nbrPage=ceil($totalSup/NBPARPAGE);
 ?>
@@ -20,6 +15,7 @@ $nbrPage=ceil($totalSup/NBPARPAGE);
 <table class="table">
    
 <?php
+
 if (isset($_GET['pagination'])) {
   $pageActuelle=$_GET['pagination'];
 if ($pageActuelle>$nbrPage) {
@@ -29,6 +25,8 @@ if ($pageActuelle>$nbrPage) {
   $pageActuelle=1;
 } 
 
+
+
 $indiceDebut=($pageActuelle-1)*NBPARPAGE;
 $indiceFin=$indiceDebut+NBPARPAGE-1;
 echo '<table class="table">';
@@ -37,11 +35,11 @@ echo '<table class="table">';
 <?php
 for ($i=$indiceDebut; $i <=$indiceFin ; $i++) { 
   
-      if (isset($_SESSION['tab'][$i])) {
+      if (isset($tab[$i])) {
        
           echo '<tr>';
         
-        echo '<td>'.$_SESSION['tab'][$i]['nom'].'</td>'.'<td>'.$_SESSION['tab'][$i]['prenom'].'</td>'.'<td>'.$_SESSION['tab'][$i]['score'].'</td>';
+        echo '<td>'.$tab[$i]['nom'].'</td>'.'<td>'.$tab[$i]['prenom'].'</td>'.'<td>'.$tab[$i]['score'].'</td>';
         echo '</tr>';
       }   
 }

@@ -7,6 +7,7 @@ $totalSup=count($tab);
 define("NBPARPAGE",4);
 $nbrPage=ceil($totalSup/NBPARPAGE);
 
+
 ?>
 
 <div class="containerListeJoueur">
