@@ -12,8 +12,33 @@ $nbrPage=ceil($totalSup/NBPARPAGE);
 
 <div class="containerListeJoueur">
 
-<div class="titrelisteJoueur">Nombre de questions/jeu <input type="text" value="5" disabled="disabled" class="nbr5"></div>
+<div class="titrelisteJoueur">
+    <form method="POST" action="">
+    Nombre de questions/jeu
+     <input type="text" name="nb_question_jeu" class="nbr5" id="nbr5" error="eror-1" value="<?php if(!empty($_SESSION['nb_question_jeu'] )){ echo $_SESSION['nb_question_jeu'] ;} ?>" onkeyup="verif_nombre(this);"> 
+     <input type="submit" value="ok" name="ok" id="ok" onclick="return isSup()">
+     <div class="error-form" id="eror-1"><?php if (!empty($erreur)) {
+         echo $erreur;
+     }?></div>
+   </form>
+   
+</div>
 <div class="tableListeQuestion">
+    <?php
+    if (isset($_POST['ok'])) {
+        if(!empty($_POST['nb_question_jeu'])){
+            $_SESSION['nb_question_jeu']= $_POST['nb_question_jeu'];
+            if( $_SESSION['nb_question_jeu']<5){
+                $erreur="Le nombre de Question/Jeu doit etre superieur ou egal a 5";
+            }
+        }else{
+            $erreur="Veuillez saisir le nombre de Question/Jeu";
+        }
+        
+    }
+        
+        
+    ?>
 <?php
 if (isset($_GET['pagination'])) {
     $pageActuelle=$_GET['pagination'];
@@ -74,7 +99,7 @@ if (isset($_GET['pagination'])) {
 if($pageActuelle<$nbrPage){
     $page=$pageActuelle+1;
     ?>
- <a href="index.php?lien=acceuil&page=listequestion&pagination=<?php echo $page;?>"><input type="button" name="suivant" class="btn-suivant" value="Suivant"/></a>
+ <a href="index.php?lien=acceuil&page=listequestion&pagination=<?php echo $page;?>"><input type="button" name="suivant" class="btn-suivant" onclick="return isSup();" value="Suivant"/></a>
  <?php
 }
 if($pageActuelle>1){
@@ -87,3 +112,37 @@ if($pageActuelle>1){
 </div>
 
 </div>
+<script>
+
+function isSup(){
+    var val= document.getElementById('nbr5').value;
+
+    if (val<5) {
+        alert("Le nombre de question doit etre Superieur ou Egal a 5");
+        return false
+    }
+}
+
+
+function verif_nombre(champ)
+  {
+	var chiffres = new RegExp("[0-9]");
+	var verif;
+	var points = 0;
+ 
+	for(x = 0; x < champ.value.length; x++)
+	{
+            verif = chiffres.test(champ.value.charAt(x));
+	    if(champ.value.charAt(x) == "."){points++;}
+            if(points > 1){
+                verif = false; 
+                points = 1;
+                }
+  	    if(verif == false){
+              champ.value = champ.value.substr(0,x) + champ.value.substr(x+1,champ.value.length-x+1); x--;
+              }
+	}
+  }
+
+
+</script>

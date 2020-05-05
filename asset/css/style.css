@@ -751,6 +751,7 @@ margin-top: -3.5%;
     text-align: center;
     background-color: white;
     border: 2px solid silver;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 
 }
@@ -781,4 +782,13 @@ margin-top: -3.5%;
     font-family: cursive;
     text-align: center;
     
+}
+#ok{
+    background-color: darkblue;
+    width: 7%;
+    height: 30px;
+    text-align: center;
+    margin-left: 2%;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

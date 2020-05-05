@@ -86,7 +86,7 @@ if(isset($_POST['enregistrer'])){
 
         <div class="bodyCreerQuestion">
 
-            <form action="" method="POST" id="formquestion" >
+            <form action="" method="POST" id="formquestion" onsubmit="return TesterChecked()">
             
                     <div class="form-questions">
                             <div class="libelle">Questions</div>
@@ -142,7 +142,7 @@ for(input of inputs){
     })
 }
 
-
+     
 
 document.getElementById("formquestion").addEventListener("submit",function(e){
     
@@ -229,8 +229,8 @@ function addInput(){
         document.getElementById('genere').children().remove();
        }
 
-     /*  
-       onsubmit="return TesterChecked()"
+      
+       //onsubmit="return TesterChecked()"
         function TesterChecked(){      
         var form=document.getElementById('formquestion');
         var inputs= form.getElementsByClassName('checked');
@@ -246,7 +246,7 @@ function addInput(){
                 alert("Veuillez Cocher une reponse Valide");
                 return false;        
        }
-       */
+       
      
        
             
