@@ -83,5 +83,20 @@ function getQuestionnaire($file="questionnaire"){
     $data=json_decode($data,true);
     return $data;
 }
+function putNbQuestionJeu($nbquestion){
+    $get=$nbquestion;
+    $get=json_encode($get);
+    file_put_contents("asset/json/nbquestionparjeu.json",$get);
+}
+function getNbQuestionJeu($file="nbquestionparjeu"){
+    $data=file_get_contents("asset/json/nbquestionparjeu.json");
+    $data=json_decode($data,true);
+    return $data;
+}
 
+function putReponses($reponses){
+    $get=$reponses;
+    $get=json_encode($get);
+    file_put_contents("asset/json/reponse.json",$get);
+}
 ?>

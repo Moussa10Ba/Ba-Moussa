@@ -1,13 +1,13 @@
 <?php
-//is_connect();
+is_connect();
 $tab=getQuestionnaire();
 $_SESSION['tab']=$tab;
 $totalSup=count($tab);
-
-define("NBPARPAGE",4);
+define("NBPARPAGE",2);
 $nbrPage=ceil($totalSup/NBPARPAGE);
-
-
+$getNbquestionparjeu=getNbQuestionJeu();
+//var_dump($getNbquestionparjeu);
+$_SESSION['$getNbquestionparjeu']=$getNbquestionparjeu;
 ?>
 
 <div class="containerListeJoueur">
@@ -15,7 +15,7 @@ $nbrPage=ceil($totalSup/NBPARPAGE);
 <div class="titrelisteJoueur">
     <form method="POST" action="">
     Nombre de questions/jeu
-     <input type="text" name="nb_question_jeu" class="nbr5" id="nbr5" error="eror-1" value="<?php if(!empty($_SESSION['nb_question_jeu'] )){ echo $_SESSION['nb_question_jeu'] ;} ?>" onkeyup="verif_nombre(this);"> 
+     <input type="text" name="nb_question_jeu" class="nbr5" id="nbr5" error="eror-1" value="<?php /*if(!empty($_POST['nb_question_jeu'] )){*/ echo $_SESSION['$getNbquestionparjeu'] ;/*}*/ ?>" onkeyup="verif_nombre(this);"> 
      <input type="submit" value="ok" name="ok" id="ok" onclick="return isSup()">
      <div class="error-form" id="eror-1"><?php if (!empty($erreur)) {
          echo $erreur;
@@ -30,6 +30,8 @@ $nbrPage=ceil($totalSup/NBPARPAGE);
             $_SESSION['nb_question_jeu']= $_POST['nb_question_jeu'];
             if( $_SESSION['nb_question_jeu']<5){
                 $erreur="Le nombre de Question/Jeu doit etre superieur ou egal a 5";
+            }else{
+                putNbQuestionJeu($_SESSION['nb_question_jeu']);
             }
         }else{
             $erreur="Veuillez saisir le nombre de Question/Jeu";

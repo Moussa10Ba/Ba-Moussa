@@ -17,10 +17,10 @@ body{
    
 }
 .content{
- background-image: url(../images/img-bg.jpg);
+ /*background-image: url(../images/img-bg.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 1000px;
 }
 .header-text{
 font-size: 30px;
@@ -224,7 +224,7 @@ font-weight: bold;
 
 .admincontainer{
     width: 94%;
-    height: 800px;
+    height: 1000px;
     background-color: #f2f2f2;
     margin-left: 3%;
     margin-top: 1%;
@@ -338,6 +338,7 @@ background-color: darkturquoise;
     border-radius: 5px;
     margin-right: 2%;
     
+    
     /*border:1px gray solid;*/
 }
  img{
@@ -349,7 +350,7 @@ background-color: darkturquoise;
 /*ListeJoueur.php**************************************************************************************************************************************/
 .containerListeJoueur{
     width: 80%;
-    height: 650px;
+    height: auto;
     float: left;
     background-color: white;
     margin-right: 15%;
@@ -426,11 +427,11 @@ background-color: darkturquoise;
     font-weight: bold;
 }
 
-/* JEUX */
+/* JEUX ************************************************************************************************************************************************/
 .containerjeux{
 background-color:#f7f7f7;
 width: 96%;
-height: 800px;
+height: 950px;
 margin-top: 1%;
 margin-left: 2%;
 }
@@ -483,24 +484,26 @@ margin-left: 2%;
 }
 .bodyjeux{
     width: 97%;
-    height: 650px;
+    height: auto;
     margin-left: 1.5%;
     margin-top: 0px;
     border-radius: 15px;
+    background-color: red;
 }
 .gauchejeux{
     width: 60%;
-    height: 600px;
+    height: auto;
     margin-left: 2%;
     margin-top: 2%;
     position: absolute;
     border: 2px solid darkturquoise;
     border-radius: 15px;
+   /* background-color: yellow;*/
 
 }
 .headergauche{
     width: 98%;
-    height: 100px;
+    height: 50px;
     background-color: #f7f7f7;
     float: left;
     margin-left: 1%;
@@ -509,20 +512,20 @@ margin-left: 2%;
 }
 .questionjeux{
     background-color: whitesmoke;
-    height: 400px;
+    height: 600px;
     width: 98%;
-    margin-top: 25%;
+    margin-top: 1%;
     border-radius: 15px;
-    border:1px solid black;
+  /*  border:1px solid black;*/
     margin-left: 1%;
     font-size: 30px;
 }
 .scorejeux{
-    width: 15%;
+    width: 10%;
     background-color:whitesmoke;
     height: 40px;
     float: right;
-    margin-top: 3%;
+    margin-top: 20%;
     border-radius: 15px;
     margin-right: 1%;
     text-align: center;
@@ -534,12 +537,12 @@ margin-left: 2%;
 }
 
 .droitejeux{
-    width: 30%;
+    width: 28%;
     height: 500px;
-    
+    /*background-color: green;*/
     float: right;
-    margin-top: 5%;
-    margin-right: 1%;
+    margin-top: 0%;
+    margin-right: 3%;
     border-radius: 10px;
 
 }
@@ -571,7 +574,7 @@ margin-left: 2%;
     background-color: white;
 }
 .tablejeux{
-    margin-top: 1%;
+    margin-top: 2%;
     background-color: white;
     height: 300px;
     width: 90%;
@@ -625,6 +628,70 @@ text-align: center;
 .tt{
     border-bottom: 4px solid darkturquoise;
 }
+.boutonsuivantprecendant{
+    margin-top: 10%;
+   /* background-color: red;*/
+    width: 100%;
+    height: 100px;
+}
+.boutonsuivantprecendant #suiv{
+    height: 75px;
+    float: right;
+    margin-right: 1%;
+    
+}
+.boutonsuivantprecendant #prec{
+    height: 75px;
+    float: left;
+    margin-left: 1%;
+}
+.libelleQuestion{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid darkturquoise;
+    text-align: center;
+    margin-top: 1%;
+    /*background-color: chartreuse;*/
+}
+.numeroquestion{
+    width: 25%;
+    border-bottom: 2px solid black;
+    margin-left: 37.5%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-style: bold;
+}
+.laquestion{
+    text-align: center;
+    
+}
+.corpsQuestions{
+    width: 100%;
+    height: 300px;
+    margin-top: 10%;
+  /*  background-color: brown;*/
+}
+.centerQuestion{
+    margin-top: 5%;
+}
+.reponsetexte{
+    width: 50%;
+    height: 50px;
+    margin-top: 10%;
+    margin-left: 25%;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.mesradio{
+margin-top: 3%;
+margin-left: 15%;
+}
+
+
 /*CREER QUESTION ----------------------------------------------------------------------------------------------------------------------------------*/
 .contenairCreerQuestion{
 width: 100%;

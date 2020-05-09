@@ -12,7 +12,10 @@ if(isset($_POST['enregistrer'])){
         $error="Saisissez le nombre de pointelsi";
     }elseif(empty($_POST['typerep'])){
         $error="Choisissez le Type de Reponse";
-    }else{
+    }elseif(empty($_POST['choix_simple']) && empty($_POST['choix_multiple']) && empty($_POST['reponse_texte'])) {
+        $error="Veuillez Choisir la reponse Valide avant d'enregistrer la question";
+   }
+    else{
         
         $questionnaire['question']=$_POST['question'];
         $questionnaire['score']=$_POST['score'];
@@ -69,6 +72,7 @@ if(isset($_POST['enregistrer'])){
         $questionnaire['reponse'.$k]=$rep;
         $k++;
        }
+       
        putQuestions($questionnaire);
         }
         
@@ -86,7 +90,7 @@ if(isset($_POST['enregistrer'])){
 
         <div class="bodyCreerQuestion">
 
-            <form action="" method="POST" id="formquestion" onsubmit="return TesterChecked()">
+            <form action="" method="POST" id="formquestion" >
             
                     <div class="form-questions">
                             <div class="libelle">Questions</div>
@@ -231,7 +235,7 @@ function addInput(){
 
       
        //onsubmit="return TesterChecked()"
-        function TesterChecked(){      
+     /*   function TesterChecked(){      
         var form=document.getElementById('formquestion');
         var inputs= form.getElementsByClassName('checked');
                 for(input of inputs){
@@ -246,7 +250,7 @@ function addInput(){
                 alert("Veuillez Cocher une reponse Valide");
                 return false;        
        }
-       
+       */
      
        
             

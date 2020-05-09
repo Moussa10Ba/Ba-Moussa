@@ -9,7 +9,7 @@ $erreur="";
         if ($result=="error") {
             $erreur= "Login ou Password incorrect";
         }else{
-            header("location:index.php?lien=".$result);
+            header("location:index.php?lien=".$result."&pagination=1");
         }
         
     }
